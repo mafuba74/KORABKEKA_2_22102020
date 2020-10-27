@@ -9,7 +9,9 @@
 
 <body>
 	<div id="page_complete">
-		<!--en tete logo plus menu de navigation-->
+
+		<!--==========en tete logo plus menu de navigation===========-->
+
 		<header id="en_tete">
 			<div id="logo">
 				<img src="images/logo/Reservia.svg" alt="logo_reservia" />
@@ -23,7 +25,11 @@
 				</ul>
 			</nav>
 		</header>
-		<!--première section, le titre plus la localisation et les filtres-->
+
+		<!--==========première section, le titre plus la localisation et les filtres===========-->
+
+		<!-- =========== LOCALISATION =========== -->
+
 		<section id="localisation_filtres">
 			<h2>Trouvez votre hébergement pour des vacances de rêve</h2>
 			<p>En plein centre ville ou en pleine nature</p>
@@ -32,6 +38,9 @@
 				<input type="text" />
 				<button id="bouton" type="button">Rechercher</button>
 			</div>
+
+		<!-- ============= FILTRES ============== -->
+			
 			<div id="filtres">
 				<h3>Filtres</h3>
 				<button id="economique" type="button">
@@ -51,14 +60,20 @@
 					<h3>Animaux autorisés</h3>
 				</button>
 			</div>
+
+		<!-- ============== LEGENDE RECHERCHE ================= -->
+			
 			<div id="results">
 				<i class="fas fa-info" id="logo_info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
 			</div>
 		</section>
-		<!--deuxieme section les hebergements + les plus populaires-->
+
+		<!-- ======== deuxieme section les hebergements + les plus populaires ======== -->
+
 		<section id="deuxieme_section">
 			<div id="hebergements">
 				<h2>Hébergements à Marseille</h2>
+
 				<!--création des différentes photos-->
 				<div id="galerie_hebergements">
 					<a href="#" class="carte_hebergement">
@@ -112,9 +127,45 @@
 				</div>
 				<a href="#" id="plus_hebergement"><h3>Afficher plus</h3></a>	
 			</div>
-			<aside id="populaires">
 
+			<!-- ===================LES PLUS POPULAIRES================== -->
+
+			<aside id="populaires">
+				<div id="titre_populaire">
+					<h2>Les plus populaires</h2>
+					<a href="#"><h2><i class="fas fa-chart-line"></i></h2></a>
+				</div>
+				<a href="#" class="hebergements_populaires">
+					<img src="images/hebergements/4_small/hotel_soleil_small.jpg" class="image_populaire" alt="hotel_chez_amina" />
+					<h3>Hotel Le soleil du matin</h3>
+					<p>Nuit à partir de 128€</p>
+					<p>
+						<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+					</p>
+				</a>
+				<a href="#" class="hebergements_populaires">
+					<img src="images/hebergements/4_small/hotel_amina_small.jpg" class="image_populaire" alt="hotel_chez_amina" />
+					<h3>Auberge la cannebière</h3>
+					<p>Nuit à partir de 25€</p>
+					<p>
+						<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+					</p>
+				</a>
+				<a href="#" class="hebergements_populaires">
+					<img src="images/hebergements/4_small/hotel_amina_small.jpg" class="image_populaire" alt="hotel_chez_amina" />
+					<h3>Auberge la cannebière</h3>
+					<p>Nuit à partir de 25€</p>
+					<p>
+						<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+					</p>
+				</a>
 			</aside>
+		</section>
+
+		<!-- ================ SECTION 3 LES ACTIVITES =================== -->
+
+		<section id="activites">
+			
 		</section>
 	</div>
 </body>
