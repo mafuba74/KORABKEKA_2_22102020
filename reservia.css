@@ -210,14 +210,16 @@ li a:hover
 #deuxieme_section
 {
 	display: flex;
+	justify-content: space-between;
+	height: auto;
 }
 #hebergements
 {
 	display: flex;
 	flex-direction: column;
-	max-width: 60%;
+	width: 60%;
 	min-width: 350px;
-	padding: 50px;
+	padding: 20px;
 	margin: 20px 0;
 	background-color: #F2F2F2;
 	border-radius: 20px;
@@ -225,20 +227,22 @@ li a:hover
 #hebergements h2
 {
 	display: flex;
-	margin: 0;
+	margin: 20px;
 
 	
 }
 #plus_hebergement
 {
 	display: block;
+	display: flex;
+	margin: 20px;
 	text-decoration: none;
 	color: black;
 }
 #galerie_hebergements
 {
 	display: flex;
-	align-content: center;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 .carte_hebergement
@@ -248,7 +252,6 @@ li a:hover
 	flex-direction: column;
 	width: 260px;
 	padding: 5px;
-	margin: 40px 40px 20px 0;
 	background-color: white;
 	border-radius: 20px;
 	text-decoration: none;
@@ -276,4 +279,49 @@ li a:hover
 	width: 260px;
 	height: 105px;
 	border-radius: 15px 15px 0 0;
+}
+
+/* Style les plus populaires */
+
+#populaires 
+{
+	display: block;
+	display: flex;
+	flex-direction: column;
+	max-width: 40%;
+	margin: 20px 0;
+	padding: 40px;
+	background-color: #F2F2F2;
+	border-radius: 20px;
+}
+
+#titre_populaire
+{
+	display: flex;
+	justify-content: space-between;
+}
+#titre_populaire h2
+{
+	margin: 0;
+}
+
+.hebergements_populaires
+{
+	display: block;
+	display: flex;
+	width: 320px;
+	margin: 40px 0 0 0;
+	padding: 5px;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0 0 10px -2px #BFBEBD;
+}
+
+.image_populaire
+{
+	display: block;
+	width: 130px;
+	height: 130px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
