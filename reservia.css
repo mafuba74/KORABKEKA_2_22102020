@@ -250,7 +250,7 @@ li a:hover
 	display: block;
 	display: flex;
 	flex-direction: column;
-	width: 260px;
+	width: 230px;
 	padding: 5px;
 	background-color: white;
 	border-radius: 20px;
@@ -276,7 +276,7 @@ li a:hover
 .image_hebergement
 {
 	display: block;
-	width: 260px;
+	width: 230px;
 	height: 105px;
 	border-radius: 15px 15px 0 0;
 }
@@ -321,7 +321,29 @@ li a:hover
 {
 	display: block;
 	width: 130px;
-	height: 130px;
+	height: 150px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
 }
+
+/* style des activités */
+
+#galerie_activites
+{
+	display: flex;
+	width: 100%;
+}
+
+#vieux_port
+{
+	display: block;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 400px;
+}
+#img_vieux_port
+{
+	display: block;
+}
+
