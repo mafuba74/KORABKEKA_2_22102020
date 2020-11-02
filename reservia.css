@@ -29,14 +29,14 @@ nav
 	height: inherit;
 }
 
-li
+#menu li
 {
 	display: flex;
 	align-items: flex-end;
 	list-style-type: none;
 	height: inherit;
 }
-li a
+#menu a
 {
 	display: inline-block;
 	padding: 50px 25px 15px 25px;
@@ -44,12 +44,12 @@ li a
 	text-decoration: none;
 }
 
-#inscrire
+#menu #inscrire
 {
 	font-weight: bold;
 	color: #0065FC;
 }
-li a:hover
+#menu a:hover
 {
 	color: #0065FC;
 	border-top: 2px solid #0065FC;
@@ -483,4 +483,41 @@ li a:hover
 	height: 155px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+}
+
+/* style du footer */
+
+footer
+{
+	display: flex;
+	background-color: #F2F2F2;
+	margin-top: 60px;
+	padding: 60px;
+}
+footer a
+{
+	text-decoration: none;
+}
+footer ul
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+
+#a_propos
+{
+	width: 34%;
+}
+
+
+#nos_hebergements
+{
+	width: 33%;
+}
+
+
+#assistance
+{
+	width: 33%;
 }
