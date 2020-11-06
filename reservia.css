@@ -14,6 +14,7 @@ body
 #page_complete 
 {
 	width: 90%;
+	height: auto;
 	margin: 0 auto;
 }
 /* style de l'entete et du menu */
@@ -161,7 +162,12 @@ nav
 {
 	display: none;
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 400px)
+{
+	#localisation_filtres{
+		width: 90%;
+		margin:0 auto;
+	}
 	#bouton{
 		display: none;
 	}
@@ -182,11 +188,13 @@ nav
 		background-color: transparent;
 	}
 }
+
 /*style des bouton de filtres*/
+
 #filtres
 {
 	display: flex;
-	height: 50px;
+	height: auto;
 	margin: 20px 0;
 }
 #filtres h3
@@ -199,6 +207,7 @@ nav
 {
 	display: flex;
 	align-items: center;
+	height: 50px;
 	padding-right: 30px;
 	padding-left: 0;
 }
@@ -208,7 +217,7 @@ nav
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	height: inherit;
+	height: 50px;
 	padding: 0 0 0 20px;
 	margin: 0 20px;
 	border: 2px solid #F2F2F2;
@@ -221,7 +230,7 @@ nav
 	position: absolute;
 	top: -2px;
 	left: -10px;
-	height: inherit;
+	height: 50px;
 	width: 50px;
 	align-items: center;
 	justify-content: center;
@@ -236,7 +245,7 @@ nav
 	position: absolute;
 	top: -2px;
 	left: -10px;
-	height: inherit;
+	height: 50px;
 	width: 50px;
 	align-items: center;
 	justify-content: center;
@@ -250,7 +259,7 @@ nav
 	position: absolute;
 	top: -2px;
 	left: -10px;
-	height: inherit;
+	height: 50px;
 	width: 50px;
 	align-items: center;
 	justify-content: center;
@@ -264,7 +273,7 @@ nav
 	position: absolute;
 	top: -2px;
 	left: -10px;
-	height: inherit;
+	height: 50px;
 	width: 50px;
 	align-items: center;
 	justify-content: center;
@@ -294,6 +303,17 @@ nav
 	height: 25px;
 	border: 1px solid  #F2F2F2;
 	border-radius: 50%;
+}
+@media all and (max-width: 400px){
+	#filtres{
+		flex-wrap: wrap;
+	}
+	#filtres h3:first-child{
+		width: 100%;
+	}
+	#filtres button{
+		margin:20px 20px 0 0;
+	}
 }
 
 /*section 2 hébergement + les plus populaires*/
@@ -332,7 +352,7 @@ nav
 #galerie_hebergements
 {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 .carte_hebergement
@@ -340,7 +360,7 @@ nav
 	display: block;
 	display: flex;
 	flex-direction: column;
-	width: 230px;
+	width: 30%;
 	padding: 5px;
 	background-color: white;
 	border-radius: 20px;
@@ -366,7 +386,7 @@ nav
 .image_hebergement
 {
 	display: block;
-	width: 230px;
+	width: 100%;
 	height: 105px;
 	border-radius: 15px 15px 0 0;
 }
@@ -375,10 +395,10 @@ nav
 
 #populaires 
 {
-	display: block;
 	display: flex;
 	flex-direction: column;
-	max-width: 40%;
+	justify-content: center;
+	width: 25%;
 	margin: 20px 0;
 	padding: 40px;
 	background-color: #F2F2F2;
@@ -392,6 +412,7 @@ nav
 }
 #titre_populaire h2
 {
+	width: 100%;
 	margin: 0;
 }
 
@@ -399,7 +420,7 @@ nav
 {
 	display: block;
 	display: flex;
-	width: 320px;
+	width: 100%;
 	margin: 40px 0 0 0;
 	padding: 5px;
 	background-color: white;
@@ -414,6 +435,21 @@ nav
 	height: 150px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
+}
+@media all and (max-width: 400px){
+	#populaires{
+		width: 100%;
+		padding: 20px;
+		border-radius: 0;
+		justify-content: center;
+	}
+	#titre_populaire{
+		width: 100%;
+	}
+	.hebergements_populaires{
+		width: 90%;
+
+	}
 }
 
 /* style des activités */
