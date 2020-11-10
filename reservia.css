@@ -13,7 +13,7 @@ body
 /* page complete sauf footer */
 #page_complete 
 {
-	width: 90%;
+	width: 95%;
 	height: auto;
 	margin: 0 auto;
 }
@@ -67,9 +67,15 @@ nav
 }
 
 /* =============== media queries smartphone (iphone 8) pour l'en tete =============== */
-
-@media all and (max-width: 400px)
-{
+@media all and (max-width: 768px){
+	#page_complete{
+		width: 90%;
+	}
+	#en_tete{
+		flex-wrap: wrap;
+	}
+}
+@media all and (max-width: 400px){
 	#page_complete{
 		width: 100%;
 	}
@@ -162,8 +168,16 @@ nav
 {
 	display: none;
 }
-@media all and (max-width: 400px)
-{
+#results{
+	margin: 20px 0;
+}
+@media all and (max-width: 768px){
+	#localisation_filtres{
+		width: 100%;
+		margin:0 auto;
+	}	
+}
+@media all and (max-width: 400px){
 	#localisation_filtres{
 		width: 90%;
 		margin:0 auto;
@@ -195,12 +209,12 @@ nav
 {
 	display: flex;
 	height: auto;
-	margin: 20px 0;
+	margin:0;
 }
 #filtres h3
 {
 	display: inline-block;
-	margin: 0;
+	margin: 20px 0;
 	padding: 0 15px 0 30px;
 }
 #filtres h3:first-child
@@ -208,6 +222,7 @@ nav
 	display: flex;
 	align-items: center;
 	height: 50px;
+	margin-bottom: 0;
 	padding-right: 30px;
 	padding-left: 0;
 }
@@ -219,7 +234,7 @@ nav
 	position: relative;
 	height: 50px;
 	padding: 0 0 0 20px;
-	margin: 0 20px;
+	margin:20px 40px 0 0;
 	border: 2px solid #F2F2F2;
 	background-color: white;
 	border-radius: 30px;
@@ -304,6 +319,15 @@ nav
 	border: 1px solid  #F2F2F2;
 	border-radius: 50%;
 }
+@media all and (max-width: 1024px){
+	#filtres{
+		flex-wrap: wrap;
+	}
+	#animaux{
+		box-sizing: border-box;
+		margin-top: 20px;
+	}
+}
 @media all and (max-width: 400px){
 	#filtres{
 		flex-wrap: wrap;
@@ -320,6 +344,7 @@ nav
 #deuxieme_section
 {
 	display: flex;
+	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 	height: auto;
 }
@@ -327,9 +352,9 @@ nav
 {
 	display: flex;
 	flex-direction: column;
-	width: 60%;
+	width: 58%;
 	min-width: 350px;
-	padding: 20px;
+	padding: 35px;
 	margin: 20px 0;
 	background-color: #F2F2F2;
 	border-radius: 20px;
@@ -337,7 +362,7 @@ nav
 #hebergements h2
 {
 	display: flex;
-	margin: 20px;
+	margin: 0 0 35px 0;
 
 	
 }
@@ -345,15 +370,19 @@ nav
 {
 	display: block;
 	display: flex;
-	margin: 20px;
 	text-decoration: none;
 	color: black;
+}
+#plus_hebergement h3
+{
+	margin:0; 
 }
 #galerie_hebergements
 {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	box-sizing: border-box;
 }
 .carte_hebergement
 {
@@ -362,9 +391,11 @@ nav
 	flex-direction: column;
 	width: 30%;
 	padding: 5px;
+	margin: 0 0 35px 0;
 	background-color: white;
 	border-radius: 20px;
 	text-decoration: none;
+	box-sizing: border-box;
 	box-shadow: 0 0 10px -2px #BFBEBD;
 }
 .carte_hebergement > h3
@@ -372,16 +403,19 @@ nav
 	margin: 5px 0;
 	padding-left: 15px;
 	color: black;
+	font-size: 1em;
 }
 .carte_hebergement > p
 {
 	margin: 5px 0;
 	padding-left: 15px;
 	color: black;
+	font-size: 1em;
 }
 .carte_hebergement p:last-child
 {
 	color: #0065FC;
+	font-size: 0.8em;
 }
 .image_hebergement
 {
@@ -390,6 +424,25 @@ nav
 	height: 105px;
 	border-radius: 15px 15px 0 0;
 }
+@media all and (max-width: 1295px){
+	#hebergements{
+		width: 65%;
+		min-width: 650px;
+	}
+}
+@media all and (max-width: 768px){
+	#hebergements{
+		width: 60%;
+		min-width: 350px;
+	}
+	#galerie_hebergements{
+		flex-direction: column;
+	}
+	.carte_hebergement{
+		width: 350px;
+	}
+
+}
 
 /* Style les plus populaires */
 
@@ -397,10 +450,11 @@ nav
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	width: 25%;
-	margin: 20px 0;
-	padding: 40px;
+	align-items: flex-start;
+	width: 28%;
+	min-width: 350px;
+	margin: 20px 0 20px 20px;
+	padding: 35px;
 	background-color: #F2F2F2;
 	border-radius: 20px;
 }
@@ -409,36 +463,100 @@ nav
 {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
 }
 #titre_populaire h2
 {
 	width: 100%;
 	margin: 0;
+	color: black;
 }
+.description_populaire
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+	color: black;
+	margin: 0;
+	padding: 5px 30px 0 5px;
+}
+
 
 .hebergements_populaires
 {
 	display: block;
 	display: flex;
 	width: 100%;
-	margin: 40px 0 0 0;
+	margin: 35px 0 0 0;
 	padding: 5px;
+	text-decoration: none;
 	background-color: white;
+	box-sizing: border-box;
 	border-radius: 20px;
 	box-shadow: 0 0 10px -2px #BFBEBD;
 }
-
+.hebergements_populaires h3, p
+{
+	margin: 10px;
+	font-size: 1em;
+}
+.stars
+{
+	font-size: 0.8em;
+	color: #0065FC;
+}
 .image_populaire
 {
 	display: block;
-	width: 130px;
-	height: 150px;
+	width: 35%;
+	height: 130px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
+}
+@media all and (max-width: 1295px){
+	#populaires{
+		width: 65%;
+		min-width: 650px;
+		margin: 20px 0;
+	}
+	#galerie_populaires{
+		display: flex;
+		justify-content: space-between;
+	}
+	.hebergements_populaires{
+		flex-direction: column;
+		width: 30%;
+	}
+	.image_populaire{
+		width: 100%;
+		border-top-right-radius: 15px;
+		border-bottom-left-radius: 0;
+	}
+}
+@media all and (max-width: 768px){
+	#populaires{
+		width: 60%;
+		min-width: 350px;
+	}
+	#galerie_populaires{
+		flex-direction: column;
+	}
+	.hebergements_populaires{
+		flex-direction: row;
+		width: 350px;
+	}
+	.image_populaire{
+		width: 35%;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 15px;
+	}
+
 }
 @media all and (max-width: 400px){
 	#populaires{
 		width: 100%;
+		min-width: 100%;
 		padding: 20px;
 		border-radius: 0;
 		justify-content: center;
@@ -457,6 +575,7 @@ nav
 {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 #activites h2
 {
@@ -466,9 +585,11 @@ nav
 {
 	display: flex;
 	align-items: center;
+	box-sizing: border-box;
 	margin: 0;
 	padding-left: 15px;
 	height: 50px;
+	font-size: 1em;
 }
 #activites a
 {
@@ -481,6 +602,17 @@ nav
 	justify-content: space-between;
 	height: auto;
 }
+.group_activites
+{
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	width: 50%;
+}
+#group_one
+{
+	margin-right: 35px;
+}
 
 #vieux_port
 {
@@ -489,7 +621,7 @@ nav
 	flex-direction: column;
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
-	width: 22%;
+	width: 47%;
 	height: 450px;
 }
 #img_vieux_port
@@ -505,7 +637,7 @@ nav
 {
 	display: flex;
 	flex-direction: column;
-	width: 22%;
+	width: 47%;
 	height: 450px;
 }
 
@@ -553,7 +685,7 @@ nav
 	display: block;
 	display: flex;
 	flex-direction: column;
-	width: 22%;
+	width: 47%;
 	height: 450px;
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
@@ -571,7 +703,7 @@ nav
 {
 	display: flex;
 	flex-direction: column;
-	width:22%;
+	width:47%;
 	height: 450px;
 }
 
@@ -580,6 +712,7 @@ nav
 	display: block;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	height: 205px;
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
@@ -597,6 +730,7 @@ nav
 	display: block;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	height: 205px;
 	margin-top: 40px;
 	border-radius: 20px;
@@ -609,6 +743,76 @@ nav
 	height: 155px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+}
+@media all and (max-width: 1295px){
+	#activites{
+		width: 100%;
+	}
+	#activites h2{
+		margin-left: 35px;
+	}
+	#galerie_activites{
+		width: 60%;
+		min-width: 650px;
+		margin-left: 35px;
+	}
+	.group_activites{
+		flex-direction: column;
+		width: 100%;
+	}
+	#vieux_port{
+		width: 100%;
+		height: 450px;
+		margin-bottom: 35px;
+	}
+	#img_vieux_port{
+		width: 100%;
+		height: 400px;
+	}
+	#pomegues_frioul{
+		width: 100%;
+	}
+	#pomegues{
+		width: 100%;
+		height: 205px;
+	}
+	#image_pomegues{
+		width: 100%;
+		height: 155px;
+	}
+	#frioul{
+		width: 100%;
+		height: 205px;
+	}
+	#image_frioul{
+		width: 100%;
+		height: 155px;
+	}
+	#calanques{
+		width: 100%;
+	}
+	#notre_dame_longchamp{
+		width: 100%;
+	}
+}
+@media all and (max-width: 768px){
+	#galerie_activites{
+		min-width: 350px;
+		margin-left: 0;
+		flex-direction: column;
+	}
+	#vieux_port{
+		height: 205px;
+	}
+	#img_vieux_port{
+		height: 155px;
+	}
+	#calanques{
+		height: 205px;
+	}
+	#image_calanques{
+		height: 155px;
+	}
 }
 
 /* style du footer */
