@@ -1,25 +1,26 @@
-@font-face
-{
+@font-face{
 	font-family: 'Raleway';
          url('static/Raleway-VariableFont_wght.ttf') format('truetype');
 }
-body
-{
+
+body{
 	font-family: Raleway, sans-serif;
 	margin: 0 auto;
 	max-width: 1400px;
 	min-width: 350px;
 }
+
 /* page complete sauf footer */
-#page_complete 
-{
+
+#page_complete{
 	width: 95%;
 	height: auto;
 	margin: 0 auto;
 }
+
 /* style de l'entete et du menu */
-#en_tete
-{
+
+#en_tete{
 	display: flex;
 	position: relative;
 	align-items: flex-end;
@@ -27,12 +28,11 @@ body
 	height: auto;
 }
 
-nav
-{
+nav{
 	height: inherit;
 }
-#menu
-{
+
+#menu{
 	display: flex;
 	align-items: flex-end;
 	margin: 0;
@@ -40,33 +40,32 @@ nav
 	height: inherit;
 }
 
-#menu li
-{
+#menu li{
 	display: flex;
 	align-items: flex-end;
 	list-style-type: none;
 	height: inherit;
 }
-#menu a
-{
+
+#menu a{
 	display: inline-block;
 	padding: 50px 25px 15px 25px;
 	color: black;
 	text-decoration: none;
 }
 
-#menu #inscrire
-{
+#menu #inscrire{
 	font-weight: bold;
 	color: #0065FC;
 }
-#menu a:hover
-{
+
+#menu a:hover{
 	color: #0065FC;
 	border-top: 2px solid #0065FC;
 }
 
-/* =============== media queries smartphone (iphone 8) pour l'en tete =============== */
+/* =============== media queries smartphone et tablette (iphone 8) pour l'en tete =============== */
+
 @media all and (max-width: 768px){
 	#page_complete{
 		width: 90%;
@@ -116,20 +115,21 @@ nav
 		border:none;
 	}
 }
+
 /*style de la première section, localisation et filtres*/
-#localisation_filtres
-{
+
+#localisation_filtres{
 	display: flex;
 	flex-direction: column;
 }
-#localisation
-{
+
+#localisation{
 	display: flex;
 	position: relative;
 	height: 50px;
 }
-#localisation i
-{
+
+#localisation i{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -138,10 +138,9 @@ nav
 	background-color: #F2F2F2;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
-
 }
-#localisation input
-{
+
+#localisation input{
 	width: 200px;
 	padding: 0 15px;
 	font-weight: bold;
@@ -151,8 +150,8 @@ nav
 	border-top:1px solid #F2F2F2;
 	border-bottom:1px solid #F2F2F2;
 }
-#bouton
-{
+
+#bouton{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -164,13 +163,15 @@ nav
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
-#bouton_logo
-{
+
+#bouton_logo{
 	display: none;
 }
+
 #results{
 	margin: 20px 0;
 }
+
 @media all and (max-width: 768px){
 	#localisation_filtres{
 		width: 100%;
@@ -205,20 +206,19 @@ nav
 
 /*style des bouton de filtres*/
 
-#filtres
-{
+#filtres{
 	display: flex;
 	height: auto;
 	margin:0;
 }
-#filtres h3
-{
+
+#filtres h3{
 	display: inline-block;
 	margin: 20px 0;
 	padding: 0 15px 0 30px;
 }
-#filtres h3:first-child
-{
+
+#filtres h3:first-child{
 	display: flex;
 	align-items: center;
 	height: 50px;
@@ -226,8 +226,8 @@ nav
 	padding-right: 30px;
 	padding-left: 0;
 }
-#filtres button
-{
+
+#filtres button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -239,8 +239,8 @@ nav
 	background-color: white;
 	border-radius: 30px;
 }
-#logo_economique
-{
+
+#logo_economique{
 	display: flex;
 	position: absolute;
 	top: -2px;
@@ -254,8 +254,8 @@ nav
 	color: #0065FC;
 	background-color: #DEEBFF;
 }
-#logo_child
-{
+
+#logo_child{
 	display: flex;
 	position: absolute;
 	top: -2px;
@@ -268,8 +268,8 @@ nav
 	color: #0065FC;
 	background-color: #DEEBFF;
 }
-#logo_romantique
-{
+
+#logo_romantique{
 	display: flex;
 	position: absolute;
 	top: -2px;
@@ -282,8 +282,8 @@ nav
 	color: #0065FC;
 	background-color: #DEEBFF;
 }
-#logo_dog
-{
+
+#logo_dog{
 	display: flex;
 	position: absolute;
 	top: -2px;
@@ -296,19 +296,19 @@ nav
 	color: #0065FC;
 	background-color: #DEEBFF;
 }
-#results
-{
+
+#results{
 	display: flex;
 	align-items: center;
 	height: 30px;
 }
-#results p
-{
+
+#results p{
 	margin: 0;
 	padding-left: 10px;
 }
-#logo_info
-{
+
+#logo_info{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -319,6 +319,7 @@ nav
 	border: 1px solid  #F2F2F2;
 	border-radius: 50%;
 }
+
 @media all and (max-width: 1024px){
 	#filtres{
 		flex-wrap: wrap;
@@ -328,6 +329,7 @@ nav
 		margin-top: 20px;
 	}
 }
+
 @media all and (max-width: 400px){
 	#filtres{
 		flex-wrap: wrap;
@@ -341,15 +343,15 @@ nav
 }
 
 /*section 2 hébergement + les plus populaires*/
-#deuxieme_section
-{
+
+#deuxieme_section{
 	display: flex;
 	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 	height: auto;
 }
-#hebergements
-{
+
+#hebergements{
 	display: flex;
 	flex-direction: column;
 	width: 58%;
@@ -359,33 +361,33 @@ nav
 	background-color: #F2F2F2;
 	border-radius: 20px;
 }
-#hebergements h2
-{
+
+#hebergements h2{
 	display: flex;
 	margin: 0 0 35px 0;
 
 	
 }
-#plus_hebergement
-{
+
+#plus_hebergement{
 	display: block;
 	display: flex;
 	text-decoration: none;
 	color: black;
 }
-#plus_hebergement h3
-{
+
+#plus_hebergement h3{
 	margin:0; 
 }
-#galerie_hebergements
-{
+
+#galerie_hebergements{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	box-sizing: border-box;
 }
-.carte_hebergement
-{
+
+.carte_hebergement{
 	display: block;
 	display: flex;
 	flex-direction: column;
@@ -398,38 +400,40 @@ nav
 	box-sizing: border-box;
 	box-shadow: 0 0 10px -2px #BFBEBD;
 }
-.carte_hebergement > h3
-{
+
+.carte_hebergement > h3{
 	margin: 5px 0;
 	padding-left: 15px;
 	color: black;
 	font-size: 1em;
 }
-.carte_hebergement > p
-{
+
+.carte_hebergement > p{
 	margin: 5px 0;
 	padding-left: 15px;
 	color: black;
 	font-size: 1em;
 }
-.carte_hebergement p:last-child
-{
+
+.carte_hebergement p:last-child{
 	color: #0065FC;
 	font-size: 0.8em;
 }
-.image_hebergement
-{
+
+.image_hebergement{
 	display: block;
 	width: 100%;
 	height: 105px;
 	border-radius: 15px 15px 0 0;
 }
+
 @media all and (max-width: 1295px){
 	#hebergements{
 		width: 65%;
 		min-width: 650px;
 	}
 }
+
 @media all and (max-width: 768px){
 	#hebergements{
 		width: 60%;
@@ -441,13 +445,11 @@ nav
 	.carte_hebergement{
 		width: 350px;
 	}
-
 }
 
 /* Style les plus populaires */
 
-#populaires 
-{
+#populaires {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -459,20 +461,19 @@ nav
 	border-radius: 20px;
 }
 
-#titre_populaire
-{
+#titre_populaire{
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 }
-#titre_populaire h2
-{
+
+#titre_populaire h2{
 	width: 100%;
 	margin: 0;
 	color: black;
 }
-.description_populaire
-{
+
+.description_populaire{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -482,9 +483,7 @@ nav
 	padding: 5px 30px 0 5px;
 }
 
-
-.hebergements_populaires
-{
+.hebergements_populaires{
 	display: block;
 	display: flex;
 	width: 100%;
@@ -496,24 +495,25 @@ nav
 	border-radius: 20px;
 	box-shadow: 0 0 10px -2px #BFBEBD;
 }
-.hebergements_populaires h3, p
-{
+
+.hebergements_populaires h3, p{
 	margin: 10px;
 	font-size: 1em;
 }
-.stars
-{
+
+.stars{
 	font-size: 0.8em;
 	color: #0065FC;
 }
-.image_populaire
-{
+
+.image_populaire{
 	display: block;
 	width: 35%;
 	height: 130px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
 }
+
 @media all and (max-width: 1295px){
 	#populaires{
 		width: 65%;
@@ -534,6 +534,7 @@ nav
 		border-bottom-left-radius: 0;
 	}
 }
+
 @media all and (max-width: 768px){
 	#populaires{
 		width: 60%;
@@ -551,8 +552,8 @@ nav
 		border-top-right-radius: 0;
 		border-bottom-left-radius: 15px;
 	}
-
 }
+
 @media all and (max-width: 400px){
 	#populaires{
 		width: 100%;
@@ -566,23 +567,22 @@ nav
 	}
 	.hebergements_populaires{
 		width: 90%;
-
 	}
 }
 
 /* style des activités */
-#activites
-{
+
+#activites{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 }
-#activites h2
-{
+
+#activites h2{
 	margin:20px 0;
 }
-#activites h3
-{
+
+#activites h3{
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
@@ -591,31 +591,30 @@ nav
 	height: 50px;
 	font-size: 1em;
 }
-#activites a
-{
+
+#activites a{
 	text-decoration: none;
 	color: black;
 }
-#galerie_activites
-{
+
+#galerie_activites{
 	display: flex;
 	justify-content: space-between;
 	height: auto;
 }
-.group_activites
-{
+
+.group_activites{
 	display: flex;
 	justify-content: space-between;
 	box-sizing: border-box;
 	width: 50%;
 }
-#group_one
-{
+
+#group_one{
 	margin-right: 35px;
 }
 
-#vieux_port
-{
+#vieux_port{
 	display: block;
 	display: flex;
 	flex-direction: column;
@@ -624,8 +623,8 @@ nav
 	width: 47%;
 	height: 450px;
 }
-#img_vieux_port
-{
+
+#img_vieux_port{
 	display: block;
 	width: 100%;
 	height: 400px;
@@ -633,16 +632,14 @@ nav
 	border-top-right-radius: 20px;
 }
 
-#pomegues_frioul
-{
+#pomegues_frioul{
 	display: flex;
 	flex-direction: column;
 	width: 47%;
 	height: 450px;
 }
 
-#pomegues
-{
+#pomegues{
 	display: block;
 	display: flex;
 	flex-direction: column;
@@ -651,8 +648,8 @@ nav
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
 }
-#image_pomegues
-{
+
+#image_pomegues{
 	display: block;
 	width: 100%;
 	height: 200px;
@@ -660,8 +657,7 @@ nav
 	border-top-right-radius: 20px;
 }
 
-#frioul
-{
+#frioul{
 	display: block;
 	display: flex;
 	flex-direction: column;
@@ -671,8 +667,8 @@ nav
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
 	margin-top: 40px;
 }
-#image_frioul
-{
+
+#image_frioul{
 	display: block;
 	width: 100%;
 	height: 110px;
@@ -680,8 +676,7 @@ nav
 	border-top-right-radius: 20px;
 }
 
-#calanques
-{
+#calanques{
 	display: block;
 	display: flex;
 	flex-direction: column;
@@ -690,8 +685,8 @@ nav
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
 }
-#image_calanques
-{
+
+#image_calanques{
 	display: block;
 	width: 100%;
 	height: 400px;
@@ -699,16 +694,14 @@ nav
 	border-top-right-radius: 20px;
 }
 
-#notre_dame_longchamp
-{
+#notre_dame_longchamp{
 	display: flex;
 	flex-direction: column;
 	width:47%;
 	height: 450px;
 }
 
-#notre_dame
-{
+#notre_dame{
 	display: block;
 	display: flex;
 	flex-direction: column;
@@ -717,16 +710,16 @@ nav
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
 }
-#image_notre_dame
-{
+
+#image_notre_dame{
 	display: block;
 	width: 100%;
 	height: 155px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 }
-#longchamp
-{
+
+#longchamp{
 	display: block;
 	display: flex;
 	flex-direction: column;
@@ -736,14 +729,15 @@ nav
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
 }
-#image_longchamp
-{
+
+#image_longchamp{
 	display: block;
 	width: 100%;
 	height: 155px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 }
+
 @media all and (max-width: 1295px){
 	#activites{
 		width: 100%;
@@ -795,6 +789,7 @@ nav
 		width: 100%;
 	}
 }
+
 @media all and (max-width: 768px){
 	#galerie_activites{
 		min-width: 350px;
@@ -817,43 +812,36 @@ nav
 
 /* style du footer */
 
-footer
-{
+footer{
 	display: flex;
 	background-color: #F2F2F2;
 	margin-top: 60px;
 	padding: 60px;
 }
-footer a
-{
+
+footer a{
 	text-decoration: none;
 	color: black;
 }
-footer ul
-{
+
+footer ul{
 	list-style-type: none;
 	line-height: 2em;
 	padding: 0;
 }
-footer h3
-{
+
+footer h3{
 	margin-top: 0;
 }
 
-
-#a_propos
-{
+#a_propos{
 	width: 34%;
 }
 
-
-#nos_hebergements
-{
+#nos_hebergements{
 	width: 33%;
 }
 
-
-#assistance
-{
+#assistance{
 	width: 33%;
 }
