@@ -97,7 +97,7 @@ nav{
 		justify-content: center;
 	}
 	#menu li:last-child{
-		margin-left: 250px;
+		margin-left: 220px;
 	}
 	#menu a{
 		width: 100%;
@@ -122,6 +122,12 @@ nav{
 	display: flex;
 	flex-direction: column;
 }
+#localisation_filtres h2{
+	margin-bottom: 0;
+}
+#localisation_filtres p{
+	margin-bottom: 25px;
+}
 
 #localisation{
 	display: flex;
@@ -129,13 +135,14 @@ nav{
 	height: 50px;
 }
 
-#localisation i{
+#bouton_map{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
+	min-width: 50px;
 	height: inherit;
 	background-color: #F2F2F2;
+	border:none;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
@@ -169,19 +176,21 @@ nav{
 }
 
 #results{
-	margin: 20px 0;
+	margin: 40px 0 20px 0;
 }
 
 @media all and (max-width: 768px){
 	#localisation_filtres{
-		width: 100%;
-		margin:0 auto;
-	}	
+		width: 90%;
+	}
+	#localisation input{
+		width: 70%;
+		max-width: 180px;
+	}
 }
 @media all and (max-width: 400px){
 	#localisation_filtres{
-		width: 90%;
-		margin:0 auto;
+		margin: 0 auto;
 	}
 	#bouton{
 		display: none;
@@ -190,6 +199,7 @@ nav{
 		display: inline-block;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		width: 50px;
 		height: 50px;
 		border:none;
@@ -208,21 +218,18 @@ nav{
 
 #filtres{
 	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
 	height: auto;
 	margin:0;
 }
 
 #filtres h3{
-	display: inline-block;
-	margin: 20px 0;
-	padding: 0 15px 0 30px;
-}
-
-#filtres h3:first-child{
 	display: flex;
+	display: inline-block;
+	margin: 40px 0 0 0;
+	padding: 0 15px 0 30px;
 	align-items: center;
-	height: 50px;
-	margin-bottom: 0;
 	padding-right: 30px;
 	padding-left: 0;
 }
@@ -233,8 +240,10 @@ nav{
 	justify-content: center;
 	position: relative;
 	height: 50px;
-	padding: 0 0 0 20px;
-	margin:20px 40px 0 0;
+	padding: 0 20px 0 50px;
+	margin:20px 20px 0 0;
+	font-size: 1.15em;
+	font-weight: bold;
 	border: 2px solid #F2F2F2;
 	background-color: white;
 	border-radius: 30px;
@@ -438,13 +447,29 @@ nav{
 	#hebergements{
 		width: 60%;
 		min-width: 350px;
+		padding: 35px 0 0 0;
+		align-items: center;
+	}
+	#hebergements h2{
+		width: 90%;
 	}
 	#galerie_hebergements{
 		flex-direction: column;
+		align-items: center;
 	}
 	.carte_hebergement{
-		width: 350px;
+		width: 90%;
 	}
+	#plus_hebergement{
+		width: 90%;
+	}
+}
+@media all and (max-width: 400px){
+	#hebergements{
+		width: 100%;
+		background-color: transparent;
+	}
+	
 }
 
 /* Style les plus populaires */
@@ -501,11 +526,6 @@ nav{
 	font-size: 1em;
 }
 
-.stars{
-	font-size: 0.8em;
-	color: #0065FC;
-}
-
 .image_populaire{
 	display: block;
 	width: 35%;
@@ -539,13 +559,21 @@ nav{
 	#populaires{
 		width: 60%;
 		min-width: 350px;
+		padding: 35px 0;
+		align-items: center;
 	}
 	#galerie_populaires{
 		flex-direction: column;
+		align-items: center;
+	}
+	#titre_populaire{
+		width: 90%;
 	}
 	.hebergements_populaires{
 		flex-direction: row;
-		width: 350px;
+		width: 90%;
+		min-width: 320px;
+		box-sizing: border-box;
 	}
 	.image_populaire{
 		width: 35%;
@@ -558,18 +586,35 @@ nav{
 	#populaires{
 		width: 100%;
 		min-width: 100%;
-		padding: 20px;
+		padding: 20px 0;
 		border-radius: 0;
-		justify-content: center;
+		align-items: center;
 	}
-	#titre_populaire{
-		width: 100%;
-	}
+	
 	.hebergements_populaires{
 		width: 90%;
 	}
 }
 
+/* style des etoiles, 5 etoiles 4 etoiles et 3 etoiles */
+
+.five_stars{
+	font-size: 0.8em;
+	color: #0065FC;
+}
+.four_stars{
+	font-size: 0.8em;
+	color: #0065FC;
+}
+.four_stars i:last-child{
+	color: #F2F2F2;
+}
+#three_stars i:nth-child(4){
+	color: #F2F2F2;
+}
+#three_stars i:last-child{
+	color: #F2F2F2;
+}
 /* style des activités */
 
 #activites{
@@ -579,7 +624,7 @@ nav{
 }
 
 #activites h2{
-	margin:20px 0;
+	margin:20px 0 35px 0;
 }
 
 #activites h3{
@@ -665,7 +710,7 @@ nav{
 	height: 160px;
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
-	margin-top: 40px;
+	margin-top: 35px;
 }
 
 #image_frioul{
@@ -725,7 +770,7 @@ nav{
 	flex-direction: column;
 	width: 100%;
 	height: 205px;
-	margin-top: 40px;
+	margin-top: 35px;
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px 1px #C6C6C6;
 }
@@ -784,6 +829,7 @@ nav{
 	}
 	#calanques{
 		width: 100%;
+		margin-bottom: 35px;
 	}
 	#notre_dame_longchamp{
 		width: 100%;
@@ -791,6 +837,9 @@ nav{
 }
 
 @media all and (max-width: 768px){
+	#activites h2{
+		margin-left: 0;
+	}
 	#galerie_activites{
 		min-width: 350px;
 		margin-left: 0;
@@ -802,11 +851,25 @@ nav{
 	#img_vieux_port{
 		height: 155px;
 	}
+	#pomegues_frioul{
+		margin-bottom: 35px;
+	}
 	#calanques{
 		height: 205px;
 	}
 	#image_calanques{
 		height: 155px;
+	}
+}
+@media all and (max-width: 400px){
+	#activites{
+		align-items: center;
+	}
+	#activites h2{
+		width: 90%;
+	}
+	#group_one{
+		margin-right: 0;
 	}
 }
 
@@ -826,7 +889,7 @@ footer a{
 
 footer ul{
 	list-style-type: none;
-	line-height: 2em;
+	line-height: 1.8em;
 	padding: 0;
 }
 
@@ -844,4 +907,18 @@ footer h3{
 
 #assistance{
 	width: 33%;
+}
+@media all and (max-width: 768px){
+	footer{
+		flex-direction: column;
+	}
+	#a_propos{
+		width: 100%;
+	}
+	#nos_hebergements{
+		width: 100%;
+	}
+	#assistance{
+		width: 100%;
+	}
 }
