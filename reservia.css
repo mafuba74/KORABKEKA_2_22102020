@@ -74,7 +74,7 @@ nav{
 		flex-wrap: wrap;
 	}
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 420px){
 	#page_complete{
 		width: 100%;
 	}
@@ -186,7 +186,7 @@ nav{
 		max-width: 180px;
 	}
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 420px){
 	#localisation_filtres{
 		margin: 0 auto;
 	}
@@ -342,7 +342,7 @@ nav{
 	}
 }
 
-@media all and (max-width: 400px){
+@media all and (max-width: 420px){
 	#filtres{
 		flex-wrap: wrap;
 	}
@@ -450,6 +450,7 @@ nav{
 	#hebergements{
 		width: 75%;
 		min-width: 350px;
+		margin:20px auto;
 		padding: 35px 0 0 0;
 		align-items: center;
 	}
@@ -468,7 +469,7 @@ nav{
 		margin-bottom: 20px;
 	}
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 420px){
 	#hebergements{
 		width: 100%;
 		background-color: transparent;
@@ -567,6 +568,7 @@ nav{
 	#populaires{
 		width: 75%;
 		min-width: 350px;
+		margin:20px auto;
 		padding: 35px 0;
 		align-items: center;
 	}
@@ -590,7 +592,7 @@ nav{
 	}
 }
 
-@media all and (max-width: 400px){
+@media all and (max-width: 420px){
 	#populaires{
 		width: 100%;
 		min-width: 100%;
@@ -846,7 +848,7 @@ nav{
 
 @media all and (max-width: 766px){
 	#activites h2{
-		width: 90%;
+		width: 75%;
 		margin: 20px auto 35px auto;
 	}
 	#galerie_activites{
@@ -870,9 +872,12 @@ nav{
 		height: 155px;
 	}
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 420px){
 	#activites{
 		align-items: center;
+	}
+	#galerie_activites{
+		width: 90%;
 	}
 	#activites h2{
 		width: 90%;
@@ -917,7 +922,7 @@ footer h3{
 #assistance{
 	width: 33%;
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 766px){
 	footer{
 		flex-direction: column;
 	}
